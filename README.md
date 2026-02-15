@@ -203,14 +203,14 @@ foodgram/
 │     User        │         │     Recipe      │
 ├─────────────────┤         ├─────────────────┤
 │ id              │         │ id              │
-│ username        │         │ author_id ──────┼───┐
-│ email           │         │ title           │   │
-│ password        │         │ text            │   │
-│ first_name      │         │ cooking_time    │   │
-│ last_name       │         │ image           │   │
-│ is_staff        │         │ created_at      │   │
-│ is_active       │         │ tags            │   │
-└─────────────────┘         └─────────────────┘   │
+│ username        │         │ author_id ──────┼────┐
+│ email           │         │ title           │    │
+│ password        │         │ text            │    │
+│ first_name      │         │ cooking_time    │    │
+│ last_name       │         │ image           │    │
+│ is_staff        │         │ created_at      │    │
+│ is_active       │         │ tags            │    │
+└─────────────────┘         └─────────────────┘    │
          │                           │             │
          │                           │             │
          │                           ▼             │
@@ -223,8 +223,8 @@ foodgram/
          │                   └─────────────────┘   │
          │                           ▲             │
          │                           │             │
-         │                   ┌───────┴───────┐   │
-         │                   │RecipeIngredient│   │
+         │                   ┌───────┴─────────┐   │
+         │                   │RecipeIngredient │   │
          │                   ├─────────────────┤   │
          │                   │ recipe_id       │   │
          │                   │ ingredient_id   │   │
@@ -265,7 +265,7 @@ foodgram/
                    ┌─────────────────┐             │
                    │ RecipeTag       │             │
                    ├─────────────────┤             │
-                   │ recipe_id ──────┘             │
-                   │ tag_id                        │
+                   │ recipe_id ──────┤             │
+                   │ tag_id          │             │
                    └─────────────────┘
 ```
